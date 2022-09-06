@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.js" />
+    <title>img slider</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel active" style="background-image: url('fire.jpg')">
+        <h3>FIRE</h3>
+      </div>
+      <div class="panel" style="background-image: url('water.jpg')">
+        <h3>WATER</h3>
+      </div>
+      <div class="panel" style="background-image: url('air.jpg')">
+        <h3>AIR</h3>
+      </div>
+      <div class="panel" style="background-image: url('soil.jpg')">
+        <h3>SOIL</h3>
+      </div>
+    </div>
+
+    <script>
+      const panels = document.querySelectorAll(".panel");
+
+      panels.forEach((panel) => {
+        panel.addEventListener('click' , () => {
+            removeactive()
+            panel.classList.add('active');
+        })
+      });
+
+      function removeactive()
+      {
+        panels.forEach(panel => {
+            panel.classList.remove('active');
+        })
+      }
+
+
+    </script>
+  </body>
+</html>
